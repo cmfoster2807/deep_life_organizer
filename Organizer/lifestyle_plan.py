@@ -38,8 +38,9 @@ class Lifestyle_Master_Plan:
     def view_plan(self):
         print("\n=== LIFESTYLE MASTER PLAN (5-10 Years) ===")
         for key, value in self.plan.items():
-            print(f"{key}: {value if value else '[Not set]'}")
-        print("=" * 43)
+            print(f"\n{key}: {value if value else '[Not set]'}")
+        print()
+        print("\=" * 43)
     
     def clear_all(self):
         for key in self.plan:

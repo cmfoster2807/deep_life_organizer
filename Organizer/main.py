@@ -1,5 +1,8 @@
+import os
 from semesterly_goals import Semesterly_Goals
 from lifestyle_plan import Lifestyle_Master_Plan
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def main():
     print("=" * 50)
@@ -27,7 +30,7 @@ def main():
 def semesterly_menu():
     filepath = input("\nEnter filepath for semesterly goals (or press Enter for 'goals.txt'): ").strip()
     if not filepath:
-        filepath = 'goals.txt'
+        filepath = os.path.join(SCRIPT_DIR, 'goals.txt')    
     
     goals = Semesterly_Goals(filepath)
     
@@ -37,8 +40,7 @@ def semesterly_menu():
         print("=" * 50)
         print("\nCurrent Tasks:")
         for i, task in enumerate(goals.to_do_list, 1):
-            if task.strip():
-                print(f"{i}. {task}")
+            print(f"{i}. {task}")
         
         print("\nOptions:")
         print("1. Add new task")
@@ -93,7 +95,7 @@ def semesterly_menu():
 def lifestyle_menu():
     filepath = input("\nEnter filepath for lifestyle plan (or press Enter for 'lifestyle.txt'): ").strip()
     if not filepath:
-        filepath = 'lifestyle.txt'
+        filepath = os.path.join(SCRIPT_DIR, 'lifestyle.txt')
     
     plan = Lifestyle_Master_Plan(filepath)
     
