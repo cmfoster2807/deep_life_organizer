@@ -1,3 +1,1 @@
-"# deep_life_organizer" 
-"# deep_life_organizer" 
-"# deep_life_organizer" 
+This is a planner that I made to resemble the deep life structure in Cal Newport's writing. I couldn't find a good software that I wanted to maintain my semester and lifestyle goals locally to my laptop so I wrote a simple script to reference them as I progress through college. 
